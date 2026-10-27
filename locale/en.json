@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Alibaba Cloud Coupon Balance",
+    "description": "Shows the remaining balance, used amount and expiry of Alibaba Cloud coupons (including the student voucher) in the sidebar footer, queried through the official BSS OpenAPI with a read-only AccessKey."
+  }
+}

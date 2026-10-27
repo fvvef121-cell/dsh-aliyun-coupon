@@ -1,0 +1,18 @@
+# 依赖与构建产物
+node_modules/
+pnpm-lock.yaml
+package-lock.json
+yarn.lock
+
+# 本机凭据：AccessKey 文件永远不要提交
+aliyun-coupon.json
+*.local.json
+.env
+.env.*
+
+# 编辑器 / 系统垃圾
+.vscode/
+.idea/
+*.log
+.DS_Store
+Thumbs.db

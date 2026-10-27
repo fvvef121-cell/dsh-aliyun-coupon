@@ -1,0 +1,80 @@
+{
+  "name": "dsh-aliyun-coupon",
+  "version": "0.1.1",
+  "type": "module",
+  "description": "阿里云卡券（代金券）余额图框：用只读 AccessKey 走 BSS OpenAPI 查询，在 DSH 侧栏页脚显示余额、已用与到期时间。Alibaba Cloud coupon balance card in the DSH sidebar.",
+  "license": "MIT",
+  "author": "fvvef121-cell",
+  "homepage": "https://github.com/fvvef121-cell/dsh-aliyun-coupon#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fvvef121-cell/dsh-aliyun-coupon.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fvvef121-cell/dsh-aliyun-coupon/issues"
+  },
+  "keywords": [
+    "deepseek",
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "client-plugin",
+    "aliyun",
+    "alibaba-cloud",
+    "coupon",
+    "voucher",
+    "balance",
+    "bss-openapi",
+    "sidebar",
+    "云工开物"
+  ],
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "lib",
+    "locale",
+    "docs",
+    "cordis.patch.yml",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true
+    }
+  },
+  "dshhub": {
+    "schemaVersion": 1,
+    "displayName": "阿里云代金券余额",
+    "summary": "侧栏页脚显示阿里云代金券（含云工开物学生专属券）的剩余余额、已用额度与到期时间；数据来自官方 BSS OpenAPI 只读接口，凭据只留在宿主进程。",
+    "categories": [
+      "费用",
+      "Web UI",
+      "观测"
+    ],
+    "surfaces": [
+      "host",
+      "web"
+    ]
+  },
+  "scripts": {
+    "test": "node tools/selfcheck.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "os": [
+    "darwin",
+    "linux",
+    "win32"
+  ]
+}

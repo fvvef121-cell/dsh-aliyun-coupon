@@ -1,0 +1,5 @@
+# dsh-aliyun-coupon bundle patch: one host row. The same package also carries the
+# Client half (`./client`), which registers the sidebar footer card.
+- insert:
+    - id: aliyun-coupon
+      name: dsh-aliyun-coupon
