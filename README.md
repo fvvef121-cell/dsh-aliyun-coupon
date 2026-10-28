@@ -145,6 +145,13 @@ dsh plugin --profile <profile> add link:/path/to/dsh-aliyun-coupon
 npm test        # 等价于 node tools/selfcheck.mjs：签名串、解析、汇总、掩码，不联网
 ```
 
+## 致谢
+
+- **[@fvvef121-cell](https://github.com/fvvef121-cell)** —— 需求提出、概念把关，以及在真实账号上做验收：余额与阿里云控制台逐位核对、指出接口口径（券余额 ≠ 账户可用金），并推动修复了初版的隐私与安全问题。
+- **DeepSeek Harness 中的 AI 结对（DeepSeek V4.1 Flash）** —— 初版实现：宿主/客户端两半代码、BSS 接口选型（`DescribeCoupon` 优先 + `QueryCashCoupons` 回退）与 ACS3/RPC 签名、离线自检、文档。
+
+> 所有提交均由仓库所有者审阅后发布。AI 不持有任何凭据，也无法访问维护者的阿里云账号；本插件读取的 AccessKey 只由使用者自己写入本机文件。
+
 ## 许可
 
 MIT，见 [LICENSE](LICENSE)。
