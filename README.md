@@ -1,5 +1,8 @@
 # dsh-aliyun-coupon
 
+[![npm version](https://img.shields.io/npm/v/dsh-aliyun-coupon.svg)](https://www.npmjs.com/package/dsh-aliyun-coupon)
+[![license](https://img.shields.io/npm/l/dsh-aliyun-coupon.svg)](LICENSE)
+
 在 DeepSeek Harness（DSH）Web GUI 的**侧栏页脚**（`sidebar.footer.action`，即 dsh-cost-meter 余额/预算图框原来的位置）显示
 **阿里云卡券（代金券）的剩余余额**、已用额度与到期时间。面向云工开物学生专属代金券这类账户券，也适用于任意阿里云代金券/抵用券。
 
@@ -36,7 +39,14 @@ DSH 的 **desktop** profile 由桌面 App 独占，`dsh` CLI 拒绝改动它，�
 **方式二：CLI（非 desktop profile）**
 
 ```bash
+# npm（最短，推荐）
+dsh plugin --profile <profile> add dsh-aliyun-coupon
+
+# 从 GitHub
 dsh plugin --profile <profile> add github:fvvef121-cell/dsh-aliyun-coupon
+
+# 锁版本
+dsh plugin --profile <profile> add github:fvvef121-cell/dsh-aliyun-coupon#v0.1.1
 ```
 
 > 新建的 profile 只有 `@deepseek-ai/dsh-base`，没有 webServer，插件会停在
